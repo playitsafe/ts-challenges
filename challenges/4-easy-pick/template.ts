@@ -1,5 +1,13 @@
 // type MyPick<T, K> = any
-
-type MyPick<T, K extends keyof T> = {
-  [P in K]: T[P]
+/**** Solution ****/
+type MyPick<TODO, KTYPES extends keyof TODO> = {
+  [KEY in KTYPES]: TODO[KEY]
 }
+
+/**Takeaways */
+/**
+ [KEY in KTYPES]: mapped types
+ TODO[KEY]: Indexed access type
+ keyof TODO: look up: get all keys from interface
+ extends: constraints
+ */
