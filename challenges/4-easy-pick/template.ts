@@ -6,8 +6,15 @@ type MyPick<TODO, KTYPES extends keyof TODO> = {
 
 /**Takeaways */
 /**
- [KEY in KTYPES]: mapped types
- TODO[KEY]: Indexed access type
- keyof TODO: look up: get all keys from interface
- extends: constraints
+👉[KEY in KTYPES]
+mapped types
+
+👉TODO[KEY]:
+Indexed access type
+
+👉keyof TODO:
+look up: get all keys from interface
+
+👉extends:
+constraints
  */
