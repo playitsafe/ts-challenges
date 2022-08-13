@@ -1,10 +1,10 @@
 /**
- * type TupleToObject<T extends readonly any[]> = any
+ * type MyReadonly<T> = any
 **/
 
 //Solution
-type TupleToObject<T extends readonly (string | number)[]> = {
-  [KEY in T[number]]: KEY
+type TupleToObject<T extends readonly (number | string)[]> = {
+  [VAL in T[number]]: VAL
 }
 
 // Takeaways
