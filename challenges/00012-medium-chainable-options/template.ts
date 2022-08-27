@@ -5,7 +5,7 @@
 
 //---------------
 
-type TReserved = Exclude<keyof any, 'get' | 'option'>
+type TReserved = Exclude<PropertyKey, 'get' | 'option'>
 
 /** Expression 1 */
 type Chainable<RESULT extends object = {}> = {
@@ -59,3 +59,8 @@ type Chainable3<T extends {} = {}> = {
     }>
   get(): T
 }
+
+//PropertyKey type. It's built-in in TypeScript.
+// type PropertyKey = string | number | symbol
+
+// https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types
