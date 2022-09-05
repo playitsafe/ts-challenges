@@ -7,6 +7,11 @@ declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
 }>
 
 
-const a = Promise.resolve(2)
+const a = Promise.resolve(2) //Promise<number>
+type ROTest = readonly [1, 2, 4]
+type Test = [1, 2, 4]
 const arr = [1,2,4]
 const carr = [1,2,4] as const
+
+type Result1 = Test extends ROTest ? true : false //true
+type Result2 = ROTest extends Test ? true : false //false
